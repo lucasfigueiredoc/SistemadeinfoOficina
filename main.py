@@ -4,7 +4,7 @@ from os import system
 from bd.connectBd import insertCliente, createTables, insertService
 #from Objetos.cliente import Cliente
 
-
+#status
 
 def ArtMenu():
     system("clear")
