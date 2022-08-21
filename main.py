@@ -1,18 +1,16 @@
-#import bd.connectBd 
-#from Objetos.cliente import Cliente
 from os import system
-from bd.connectBd import insertCliente, createTables, insertService
-#from Objetos.cliente import Cliente
+from bd.connect import Conn
 
-#status
+conn = Conn()
+conn.createTables()
 
 def ArtMenu():
     system("clear")
     print("----------------------------------")
     print("     1 : Registrar Serviço        ")
     print("     2 : Cadastrar Cliente        ")
-    print("     3 : Agenda de Serviços       ")
-    print("     4 : Criar tabelas SQL        ")
+    print("     3 : Listar Clientes          ")
+    print("     4 : Agenda de Serviços       ")
     print("     5 : Fechar Aplicação         ")
     print("----------------------------------")
     
@@ -24,17 +22,17 @@ def operacao(x):
 
     match x:
         case '1':
-            insertService()
+            conn.insertService()
         case '2':
-            insertCliente()
+            conn.insertCliente()
         case '3':
-            return print("Case 3 selected")
+            conn.listarClientes()
         case '4':
-            createTables()
+            conn.createTables()
         case '5':
+            conn.close()
             exit()
     
-        
         case _:
             return print('Valor inválido, retorne!')
         
