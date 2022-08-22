@@ -11,7 +11,8 @@ def ArtMenu():
     print("     2 : Cadastrar Cliente        ")
     print("     3 : Listar Clientes          ")
     print("     4 : Agenda de Serviços       ")
-    print("     5 : Fechar Aplicação         ")
+    print("     5 : Listar Serviços Feitos   ")
+    print("     0 : Fechar Aplicação         ")
     print("----------------------------------")
     
     
@@ -28,8 +29,10 @@ def operacao(x):
         case '3':
             conn.listarClientes()
         case '4':
-            conn.createTables()
+            print("Fora do ar")
         case '5':
+            conn.listarServicos()
+        case '0':
             conn.close()
             exit()
     

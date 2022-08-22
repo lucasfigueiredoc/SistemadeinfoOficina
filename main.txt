@@ -1,0 +1,4 @@
+Lucas Figueiredo Câmara
+Fase: Demonstrar projeto
+Sistema baseado em PY para executar SQL
+Matéria: Banco de dados
